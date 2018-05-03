@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-110588167-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        function doAnalytics(index) {
+            console.log("button click " + index);
+            if (window.ga && ga.loaded) {
+                ga('send', 'event', 'SpecialButtons', 'state' + index, 'Fall Campaign');
+                console.log("ga executed");
+            } else {
+                console.log("no ga");
+            }
+        }
+    </script>
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cards - Jason Brown</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <style>
+        a.card-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        p.card-description {
+            display: none;
+        }
+
+        .grayscale {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            filter: grayscale(100%);
+            transition: all 1s ease;
+        }
+
+        .colourscale {
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            filter: grayscale(0%);
+            transition: all 1s ease;
+        }
+
+        #suspect-picture {
+            text-align: center;
+        }
+
+        #weapon-picture {
+            text-align: center;
+        }
+
+        #room-picture {
+            text-align: center;
+        }
+    </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/cards1.js"></script>
+</head>
+<body>
+
+    <section class="section">
+
+        <div class="columns">
+            <div class="column">
+                <article class="message">
+                    <div class="message-header">
+                        <p>Suspect</p>
+                        <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body" id="suspect-message">
+                    </div>
+                    <div class="message-body" id="suspect-description">
+                    </div>
+                    <div class="message-body" id="suspect-picture">
+                        <img src="images/placeholder.jpg" id="suspect-image" />
+                    </div>
+                </article>
+            </div>
+
+            <div class="column">
+                <article class="message is-primary">
+                    <div class="message-header">
+                        <p>Weapon</p>
+                        <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body" id="weapon-message">
+                    </div>
+                    <div class="message-body" id="weapon-description">
+                    </div>
+                    <div class="message-body" id="weapon-picture">
+                        <img src="images/placeholder.jpg" id="weapon-image" />
+                    </div>
+                </article>
+            </div>
+
+            <div class="column">
+                <article class="message is-success">
+                    <div class="message-header">
+                        <p>Room</p>
+                        <button class="delete" aria-label="delete"></button>
+                    </div>
+                    <div class="message-body" id="room-message">
+                    </div>
+                    <div class="message-body" id="room-description">
+                    </div>
+                    <div class="message-body" id="room-picture">
+                        <img src="images/placeholder.jpg" id="room-image" />
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!--Suspects section-->
+        <div class="tile is-ancestor">
+            <!--One-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link suspects" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/col-mustard.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Colonel Mustard</p>
+                    <p class="card-description">The militant and athletic colonel of the game.</p>
+                </article>
+            </div>
+            <!--Two-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link suspects" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/miss-scarlett.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Miss Scarlett</p>
+                    <p class="card-description">The sultry and beautiful actress of the game.</p>
+                </article>
+            </div>
+            <!--Three-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link suspects" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/mrs-peacock.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Mrs Peacock</p>
+                    <p class="card-description">The sinister and political senator of the game.</p>
+                </article>
+            </div>
+            <!--Four-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link suspects" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/mrs-white.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Mrs White</p>
+                    <p class="card-description">The intrusive and kindly maid of the game.</p>
+                </article>
+            </div>
+            <!--Five-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link suspects" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/prof-plum.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Professor Plum</p>
+                    <p class="card-description">The uptight and intelligent professor of the game.</p>
+                </article>
+            </div>
+            <!--Six-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link suspects" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/rev-green.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Reverand Green</p>
+                    <p class="card-description">The conniving and religious priest of the game.</p>
+                </article>
+            </div>
+        </div>
+
+        <!--Weapons row-->
+        <!--Suspects section-->
+        <div class="tile is-ancestor">
+            <!--One-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link weapon" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/candlestick.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Candlestick</p>
+                    <p class="card-description">The candlestick.</p>
+                </article>
+            </div>
+            <!--Two-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link weapon" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/dagger.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Dagger</p>
+                    <p class="card-description">The dagger.</p>
+                </article>
+            </div>
+            <!--Three-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link weapon" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/lead-piping.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Lead Piping</p>
+                    <p class="card-description">Lead pipe.</p>
+                </article>
+            </div>
+            <!--Four-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link weapon" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/revolver.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Revolver</p>
+                    <p class="card-description">The revolver.</p>
+                </article>
+            </div>
+            <!--Five-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link weapon" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/spanner.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Spanner</p>
+                    <p class="card-description">The spanner.</p>
+                </article>
+            </div>
+            <!--Six-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link weapon" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/rope.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Rope</p>
+                    <p class="card-description">The rope.</p>
+                </article>
+            </div>
+        </div>
+
+        <!--Rooms row-->
+        <!--Suspects section-->
+        <div class="tile is-ancestor">
+            <!--One-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link room" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/lounge.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Lounge</p>
+                    <p class="card-description">A communal room where members of a family spend time together.</p>
+                </article>
+            </div>
+            <!--Two-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link room" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/ballroom.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Ballroom</p>
+                    <p class="card-description">A room where formal parties and gatherings are held.</p>
+                </article>
+            </div>
+            <!--Three-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link room" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/billiard-room.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Billiard Room</p>
+                    <p class="card-description">A room where games such as snooker and poole and other games are played.</p>
+                </article>
+            </div>
+            <!--Four-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link room" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/dining-room.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Dining Room</p>
+                    <p class="card-description">A room where people eat together.</p>
+                </article>
+            </div>
+            <!--Five-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link room" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/hall.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Hall</p>
+                    <p class="card-description">A large space, usually empty or leading to other roonms.</p>
+                </article>
+            </div>
+            <!--Six-->
+            <div class="tile is-2">
+                <article class="tile-is-child container">
+                    <a class="card-link room" href="#"></a>
+                    <figure class="image">
+                        <img class="is 3by4 grayscale" src="images/study.jpg" />
+                    </figure>
+                    <p class="subtitle card-title">Study</p>
+                    <p class="card-description">A room in which a person goes to do work or other business.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
